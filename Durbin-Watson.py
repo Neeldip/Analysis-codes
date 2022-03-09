@@ -1,0 +1,37 @@
+import statsmodels.stats.stattools as dw
+import pandas as pd
+#df = pd.read_excel(r"I:\GPM\May_2001-2020_monthly\maytimeseries.xlsx",sheet_name="Sheet1",usecols="R:AE")
+#df = pd.read_excel(r"F:\AOD_ANALYSIS\MERRA_2\Monthly\timeseries\March\ALL_Location_March.xlsx",sheet_name="Sheet1",usecols="B:P")
+df = pd.read_excel(r"F:\AOD_ANALYSIS\MODIS_MOD_L3\MOD08_L3.xlsx",sheet_name="REGION1",usecols="B:N",nrows=21)
+#df = pd.read_excel(r"F:\AOD_ANALYSIS\MODIS_MOD_L3\MOD08_L3.xlsx",sheet_name="Sheet1",usecols="A",nrows=241)
+#print(df)
+
+
+result = dw.durbin_watson(df["JAN"])
+print(result)
+result = dw.durbin_watson(df["FEB"])
+print(result)
+result = dw.durbin_watson(df["MAR"])
+print(result)
+result = dw.durbin_watson(df["APR"])
+print(result)
+result = dw.durbin_watson(df["MAY"])
+print(result)
+result = dw.durbin_watson(df["JUN"])
+print(result)
+result = dw.durbin_watson(df["JUL"])
+print(result)
+result = dw.durbin_watson(df["AUG"])
+print(result)
+result = dw.durbin_watson(df["SEP"])
+print(result)
+result = dw.durbin_watson(df["OCT"])
+print(result)
+result = dw.durbin_watson(df["NOV"])
+print(result)
+result = dw.durbin_watson(df["DEC"])
+print(result)
+result = dw.durbin_watson(df["MEAN"])
+print(result)
+
+
